@@ -1,0 +1,8 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX a: <http://www.daml.org/2001/01/gedcom/gedcom#>
+
+SELECT DISTINCT ?y
+WHERE {
+	?x a:place ?y .
+	?x rdf:type a:Marriage .
+}
