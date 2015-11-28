@@ -1,0 +1,109 @@
+1.) Create a new TDB database, load the royal92 data set into it, put the new TDB database in folder 'triple-store'.
+
+
+PS C:\Users\Arif\Documents\Kuliah\_Master Telematics\Data Science\semantic-web\exercise\data> C:\Users\Arif\Documents\apache-jena-3.0.0\bat\tdbloader.bat --loc .\triple-store\ .\royal92.nt
+21:27:38 INFO  loader               :: -- Start triples data phase
+21:27:38 INFO  loader               :: ** Load empty triples table
+21:27:38 INFO  loader               :: -- Start quads data phase
+21:27:38 INFO  loader               :: ** Load empty quads table
+21:27:38 INFO  loader               :: Load: .\royal92.nt -- 2015/11/28 21:27:38 CET
+21:27:40 INFO  loader               :: -- Finish triples data phase
+21:27:40 INFO  loader               :: ** Data: 29,657 triples loaded in 1.48 seconds [Rate: 20,079.21 per second]
+21:27:40 INFO  loader               :: -- Finish quads data phase
+21:27:40 INFO  loader               :: -- Start triples index phase
+21:27:40 INFO  loader               :: ** Index SPO->POS: 29,657 slots indexed in 0.16 seconds [Rate: 188,898.09 per second]
+21:27:40 INFO  loader               :: ** Index SPO->OSP: 29,657 slots indexed in 0.17 seconds [Rate: 173,432.75 per second]
+21:27:40 INFO  loader               :: -- Finish triples index phase
+21:27:40 INFO  loader               :: ** 29,657 triples indexed in 0.34 seconds [Rate: 86,463.55 per second]
+21:27:40 INFO  loader               :: -- Finish triples load
+21:27:40 INFO  loader               :: ** Completed: 29,657 triples loaded in 1.82 seconds [Rate: 16,295.05 per second]
+21:27:40 INFO  loader               :: -- Finish quads load
+
+
+PS C:\Users\Arif\Documents\Kuliah\_Master Telematics\Data Science\semantic-web\exercise\data> ls .\triple-store\
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       11/28/2015   9:27 PM        8388608 GOSP.dat
+-a----       11/28/2015   9:27 PM        8388608 GOSP.idn
+-a----       11/28/2015   9:27 PM        8388608 GPOS.dat
+-a----       11/28/2015   9:27 PM        8388608 GPOS.idn
+-a----       11/28/2015   9:27 PM        8388608 GSPO.dat
+-a----       11/28/2015   9:27 PM        8388608 GSPO.idn
+-a----       11/28/2015   9:27 PM              0 journal.jrnl
+-a----       11/28/2015   9:27 PM        8388608 node2id.dat
+-a----       11/28/2015   9:27 PM        8388608 node2id.idn
+-a----       11/28/2015   9:27 PM         594563 nodes.dat
+-a----       11/28/2015   9:27 PM        8388608 OSP.dat
+-a----       11/28/2015   9:27 PM        8388608 OSP.idn
+-a----       11/28/2015   9:27 PM        8388608 OSPG.dat
+-a----       11/28/2015   9:27 PM        8388608 OSPG.idn
+-a----       11/28/2015   9:27 PM        8388608 POS.dat
+-a----       11/28/2015   9:27 PM        8388608 POS.idn
+-a----       11/28/2015   9:27 PM        8388608 POSG.dat
+-a----       11/28/2015   9:27 PM        8388608 POSG.idn
+-a----       11/28/2015   9:27 PM        8388608 prefix2id.dat
+-a----       11/28/2015   9:27 PM        8388608 prefix2id.idn
+-a----       11/28/2015   9:27 PM              0 prefixes.dat
+-a----       11/28/2015   9:27 PM        8388608 prefixIdx.dat
+-a----       11/28/2015   9:27 PM        8388608 prefixIdx.idn
+-a----       11/28/2015   9:27 PM        8388608 SPO.dat
+-a----       11/28/2015   9:27 PM        8388608 SPO.idn
+-a----       11/28/2015   9:27 PM        8388608 SPOG.dat
+-a----       11/28/2015   9:27 PM        8388608 SPOG.idn
+-a----       11/28/2015   9:27 PM           1604 stats.opt
+-a----       11/28/2015   9:27 PM              5 tdb.lock
+
+
+*************************************************************************************************************************************************
+
+2.) execute query in question 2.1.a on this newly created database
+
+---------------------------------
+C:\Users\Arif\Documents\apache-jena-3.0.0\bat\tdbquery.bat --loc=triple-store\ --query=q_2_1_a.rq --syntax ARQ --results text
+----------------------
+| x                  |
+======================
+| "Lady"             |
+| "Countess"         |
+| "Princess"         |
+| "Crown Princess"   |
+| "Grand Duchess"    |
+| "Duchess of Kent"  |
+| "Archduchess"      |
+| "Empress"          |
+| "Duchess"          |
+| "Baroness"         |
+| "Lady Ramsay"      |
+| "Queen of Spain"   |
+| "Queen of Scots"   |
+| "Duchess of Fife"  |
+| "Abess"            |
+| "Countess of Kent" |
+| "Queen of Castile" |
+| "Countess of S."   |
+| "Princess Royal"   |
+| "Duchess of York"  |
+| "Queen of France"  |
+| "Marchioness"      |
+| "Hon."             |
+| "Hon"              |
+| "Lady of Mercia"   |
+| "Abbess"           |
+| "Queen of England" |
+| "Queen of Wessex"  |
+| "Constance"        |
+| "Queen"            |
+| "Mademoiselle"     |
+| "Madame"           |
+| "Countess Rhedey"  |
+| "Princess of Teck" |
+| "Tsarina"          |
+| "Sweden"           |
+| "Arch Duchess"     |
+| "Queen of Denmark" |
+| "Queen Regent"     |
+| "Queen of Greece"  |
+| "Dame"             |
+| "Queen of Romania" |
+----------------------
