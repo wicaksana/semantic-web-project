@@ -20,7 +20,7 @@ import org.apache.log4j.Logger;
  *
  */
 
-public class q_2_4 {
+public class Question_2_4 {
 	public static final String inputFile = "royal92.nt";
 	public static final String NL = System.getProperty("line.separator");
 	private static final Logger log = Logger.getLogger("royal");

@@ -1,13 +1,13 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX a: <http://www.daml.org/2001/01/gedcom/gedcom#>
 
-SELECT ?z
+SELECT ?family_member_of_Beatrif_of_Netherlands
 WHERE {
 	?x a:name "Beatrix of_Netherlands //" .
 
 	?x a:spouseIn ?y .
 	
 	{ ?w a:spouseIn ?y . } UNION { ?w a:childIn ?y . }
-	?w a:name ?z .
-	FILTER (?z != "Beatrix of_Netherlands //")
+	?w a:name ?family_member_of_Beatrif_of_Netherlands .
+	FILTER (?family_member_of_Beatrif_of_Netherlands != "Beatrix of_Netherlands //")
 }
