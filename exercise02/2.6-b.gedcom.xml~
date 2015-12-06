@@ -153,51 +153,51 @@
 </rdfs:Class>
 
 <rdfs:Class rdf:ID="Parent">
-  <owl:intersectionOf rdf:parseType="Collection">
+  <rdfs:intersectionOf rdf:parseType="Collection">
     <rdfs:Class rdf:resource="#Individual" />
     <daml:Restriction>
       <daml:onProperty rdf:resource="#parentOf"/>
       <daml:toClass rdf:resource="#Individual"/>
     </daml:Restriction>
-  </owl:intersectionOf>
+  </rdfs:intersectionOf>
 </rdfs:Class>
 
 <rdfs:Class rdf:ID="Child">
-  <owl:intersectionOf rdf:parseType="Collection">
+  <rdfs:intersectionOf rdf:parseType="Collection">
     <rdfs:Class rdf:resource="#Individual" />
     <daml:Restriction>
       <daml:onProperty rdf:resource="#childOf"/>
       <daml:toClass rdf:resource="#Individual"/>
     </daml:Restriction>
-  </owl:intersectionOf>
+  </rdfs:intersectionOf>
 </rdfs:Class>
 
 <rdfs:Class rdf:ID="Father">
-  <owl:intersectionOf rdf:parseType="Collection">
+  <rdfs:intersectionOf rdf:parseType="Collection">
     <rdfs:Class rdf:resource="#Male" />
     <rdfs:Class rdf:resource="#Parent" />
-  </owl:intersectionOf>
+  </rdfs:intersectionOf>
 </rdfs:Class>
 
 <rdfs:Class rdf:ID="Mother">
-  <owl:intersectionOf rdf:parseType="Collection">
+  <rdfs:intersectionOf rdf:parseType="Collection">
     <rdfs:Class rdf:resource="#Female" />
     <rdfs:Class rdf:resource="#Parent" />
-  </owl:intersectionOf>
+  </rdfs:intersectionOf>
 </rdfs:Class>
 
 <rdfs:Class rdf:ID="Son">
-  <owl:intersectionOf rdf:parseType="Collection">
+  <rdfs:intersectionOf rdf:parseType="Collection">
     <rdfs:Class rdf:resource="#Male" />
     <rdfs:Class rdf:resource="#Child" />
-  </owl:intersectionOf>
+  </rdfs:intersectionOf>
 </rdfs:Class>
 
 <rdfs:Class rdf:ID="Daughter">
-  <owl:intersectionOf rdf:parseType="Collection">
+  <rdfs:intersectionOf rdf:parseType="Collection">
     <rdfs:Class rdf:resource="#Female" />
     <rdfs:Class rdf:resource="#Child" />
-  </owl:intersectionOf>
+  </rdfs:intersectionOf>
 </rdfs:Class>
 
 <rdfs:Class rdf:ID="Family">
