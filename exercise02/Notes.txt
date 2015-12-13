@@ -1,0 +1,31 @@
+- childOf and parentOf not only need to be enriched to the ontology, but also to be used in the data file as well.
+  Therefore, adding property childOf and parentOf will not result in the expected inference ('child' and 'parent'). 
+
+  one way to fix this, is by using childIn instead of childOf. childIn is already used in the data file.
+
+  even substituting childOf with childIn alone is not enough, because the description provided:
+	Child v Individual u ∃childOf.Individual
+  is incorrect.
+  
+  If we take sample from the data file:
+
+<a:Individual rdf:about="#@I661@"
+	 a:name="Beatrix of_Netherlands //"
+	 a:sex="F"
+	 a:title="Queen">
+	<a:childIn rdf:resource="#@F243@"/>
+	<a:spouseIn rdf:resource="#@F443@"/>
+	<a:birth rdf:resource="#event3803"/>
+</a:Individual>
+
+  it can be seen that property childIn is used to connect Individual to Family. Hence, the correct description should be:
+	Child = Individual u ∃childOf.Family
+
+  
+  We can add property parentOf, but we need to add this property into the data file, so that we can infer whether an individual is a parent.
+  This is very costly (need too much time). The easiest way is to use the existing property 'spouseIn'.
+  Then, using the same argument as Child class above, Parent class should be:
+	Parent = Individual u ∃spouseIn.Family
+	
+  The drawback of this approach is that an Individual who has 'spouseIn' property may does not have child.
+	
