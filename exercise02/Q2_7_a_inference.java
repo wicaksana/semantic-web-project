@@ -45,7 +45,7 @@ public class Q2_7_a_inference {
 		//Output file
 		
 		System.out.println("load schema and data files....");
-		Model schema = FileManager.get().loadModel("2.6.-b-gedcom.xml");
+		Model schema = FileManager.get().loadModel("2.6-b-gedcom.xml");
 		Model data = FileManager.get().loadModel("royal92.owl");
 		Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
 		reasoner = reasoner.bindSchema(schema);
