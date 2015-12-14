@@ -1,0 +1,30 @@
+\documentclass[pape=a4, fontsize=12pt]{article}
+\usepackage{amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Group 2/04}
+\title{\textbf{Answer of Question 2.8.a}}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Start the document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+%% see the following for the math symbol list
+%% http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html
+\noindent
+Sibling $ \equiv $ Individual $ \sqcap$ $ \exists$siblingOf.Individual \\
+Brother $ \equiv $ Sibling $ \sqcap $ Male \\
+Sister $ \equiv $ Sibling $ \sqcap $ Female \\
+Uncle $ \equiv $ Male $ \sqcap $ $ \exists$siblingOf.Parent \\
+Aunt $ \equiv $ Female $ \sqcap $ $ \exists$siblingOf.Parent \\
+Grandparent $ \equiv $ Individual $ \sqcap $ $ \exists$parentOf.Parent \\
+Grandfather $ \equiv $ Grandparent $ \sqcap $ Male \\
+Grandmother $ \equiv $ Grandparent $ \sqcap $ Female \\
+Grandchild $ \equiv $ $ Grandparent^{-} $ \\
+Grandson $ \equiv $ Grandchild $ \sqcap $ Male \\
+Granddaughter $ \equiv $ Grandchild $ \sqcap $ Female \\
+\end{document}
