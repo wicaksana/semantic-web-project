@@ -16,11 +16,15 @@
 %% see the following for the math symbol list
 %% http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html
 \noindent
-Sibling $ \equiv $ Individual $ \sqcap$ $ \exists$siblingOf.Individual \\
+Using the assumption of ontology description mentioned in question 2.6.b: \\
+
+\noindent
+Sibling $ \equiv $ Individual $ \sqcap$ $ \exists$childOf.(Family $ \sqcap>$1 parentOf.Individual) \\
 Brother $ \equiv $ Sibling $ \sqcap $ Male \\
 Sister $ \equiv $ Sibling $ \sqcap $ Female \\
-Uncle $ \equiv $ Male $ \sqcap $ $ \exists$siblingOf.Parent \\
-Aunt $ \equiv $ Female $ \sqcap $ $ \exists$siblingOf.Parent \\
+%%Uncle $ \equiv $ Male $ \sqcap $ $ \exists$siblingOf.Parent \\
+Uncle $ \equiv $ Brother $ \sqcap $ $ \exists$childOf.Sibling \\
+Aunt $ \equiv $ Sister $ \sqcap  $ $ \exists$childOf.Sibling \\
 Grandparent $ \equiv $ Individual $ \sqcap $ $ \exists$parentOf.Parent \\
 Grandfather $ \equiv $ Grandparent $ \sqcap $ Male \\
 Grandmother $ \equiv $ Grandparent $ \sqcap $ Female \\
