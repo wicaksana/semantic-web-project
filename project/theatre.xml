@@ -1,0 +1,635 @@
+<rdf:RDF
+    xmlns:wolff="http://www.wolff.nl/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" > 
+  <rdf:Description rdf:about="http://www.wolff.nl/films/the-second-best-exotic-marigold-hotel">
+    <wolff:releaseDate>19 maart 2015</wolff:releaseDate>
+    <wolff:name>The Second Best Exotic Marigold Hotel</wolff:name>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#t6RU5ITTsnfuBUaHy8gbaJVr7Q0="/>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#BuOLR9zyZyeCJZlVjSHsG07dNMI="/>
+    <wolff:genre>Comedy</wolff:genre>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#UAni8jWhk7y5XqOhnhs7rc4Va0s="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#VikfP8baSoDKfoMVt80l9VS6Mwk="/>
+    <wolff:link>http://www.thebestexoticmarigoldhotel.nl</wolff:link>
+    <wolff:duration>123 minuten</wolff:duration>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#sgCT4kCgGNVF4GOOQR4vv70tJkA="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#QhFGJvzWFFzQyXDQzl1uJFKjwEY="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#HtwAApC0LxOne-p5n2lrmwWeR8Q="/>
+    <wolff:language>Engels</wolff:language>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#xyXP8uqHgbfIoOgOV7C2_CDEKCs=">
+    <wolff:name>Woody Harrelson</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/point-break-3d">
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#HyMudlXCuDdH7aaAqjb55HLoGRQ="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#97h-fZg1t8ajvR0DivuTXVsyuEw="/>
+    <wolff:genre>Actie</wolff:genre>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#5ZOh-zQpw1dkcAiHzWMz1XX6IYs="/>
+    <wolff:duration>113 minuten</wolff:duration>
+    <wolff:link>http://www.pointbreakmovie.com</wolff:link>
+    <wolff:language>Engels</wolff:language>
+    <wolff:name>Point Break 3D</wolff:name>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#D7p3mj6HA9awO6cacjc7yk_37Qw="/>
+    <wolff:releaseDate>7 januari 2016</wolff:releaseDate>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#qbdVCWC3lCgi9Pk2HclDTOeBHLM="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#5zPC4XbZvBDFNcP2OEmqZ9t2YvU=">
+    <wolff:name>Adam Scott</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#A3UdbG1MMY0dZGWxSe5PoL_4a4s=">
+    <wolff:name>Peter Sohn</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/spectre">
+    <wolff:language>Engels</wolff:language>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#rUOMQRJYO4x822ngecdsLOg-xLs="/>
+    <wolff:link>http://www.007.com</wolff:link>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#1mS5-LxGTUlczPEa738k2KjWdKk="/>
+    <wolff:genre>Actie</wolff:genre>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#l26qBJW92rXuA8njWxysGKYTCG8="/>
+    <wolff:releaseDate>29 oktober 2015</wolff:releaseDate>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#IUh6qlUfpgrpvL-0KgTMq7vIeL0="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#jbtJ6vC6fH6WVYHwalRexXf1uD0="/>
+    <wolff:name>SPECTRE</wolff:name>
+    <wolff:duration>148 minuten</wolff:duration>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#mjwnj38p3b0Tq0zGuMxyvCvby1w="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/distributor#BuOLR9zyZyeCJZlVjSHsG07dNMI=">
+    <wolff:name>20th Century Fox Film Netherlands BV</wolff:name>
+    <wolff:link>http://www.foxfilm.nl</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/the-good-dinosaur-3d-nl">
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#cXr-HZE7MqooSwvm1lSYvbGBMWk="/>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#A3UdbG1MMY0dZGWxSe5PoL_4a4s="/>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:duration>100 minuten</wolff:duration>
+    <wolff:genre>Familie</wolff:genre>
+    <wolff:genre>Animatie</wolff:genre>
+    <wolff:releaseDate>25 november 2015</wolff:releaseDate>
+    <wolff:name>The Good Dinosaur 3D (NL)</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#bDTt4qX2Po-F0N6Oyy8XDWszLJU=">
+    <wolff:name>Kurt Russell</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#hEuIuqvVlB_jnCxPC7tPhzY1rQg=">
+    <wolff:name>Benjamin Walker</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#Dz1T0hnP-wQdaKEGKIeexU5kpgM=">
+    <wolff:name>Hadewych Minis</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#oiyuDGTcdN0MMKPHL19v6QgK-0E=">
+    <wolff:name>Joseph Gordon-Levitt</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#sL7nl-vqVKXkLyL1hqKB-BbQYGA=">
+    <wolff:name>Scott Hicks</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/distributor#cXr-HZE7MqooSwvm1lSYvbGBMWk=">
+    <wolff:name>Walt Disney Studio Motion Pictures (Nederland) BV</wolff:name>
+    <wolff:link>http://www.disney.nl</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/krampus">
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#zkcYwZ83zgdwj7NQN2WU-roje18="/>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#cs4QiZZN6wHSrZ1v1zql9c6XDoE="/>
+    <wolff:duration>98 minuten</wolff:duration>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#1mS5-LxGTUlczPEa738k2KjWdKk="/>
+    <wolff:releaseDate>10 december 2015</wolff:releaseDate>
+    <wolff:genre>Horror</wolff:genre>
+    <wolff:genre>Comedy</wolff:genre>
+    <wolff:language>Engels</wolff:language>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#5zPC4XbZvBDFNcP2OEmqZ9t2YvU="/>
+    <wolff:name>Krampus</wolff:name>
+    <wolff:link>http://www.krampusfilm.nl</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#97h-fZg1t8ajvR0DivuTXVsyuEw=">
+    <wolff:name>Teresa Palmer</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/bon-bini-holland">
+    <wolff:director rdf:resource="http://www.wolff.nl/person#RbEHIkl8hrACj8SHzj2PxyKg6S8="/>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:duration>88 minuten</wolff:duration>
+    <wolff:genre>Comedy</wolff:genre>
+    <wolff:releaseDate>10 december 2015</wolff:releaseDate>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#tKZoDxUsmBY8X1C-mNBdFwvTxZ4="/>
+    <wolff:name>Bon Bini Holland</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#wWIZybUYBIoQWVF4X8rr7_a9gmY=">
+    <wolff:name>Jonathan Levine (II)</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#xhF1rFO9IZWDoOFOuN8vR-LTHqY=">
+    <wolff:name>Seth Rogen</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/distributor#1mS5-LxGTUlczPEa738k2KjWdKk=">
+    <wolff:name>Universal Pictures International Netherlands BV</wolff:name>
+    <wolff:link>http://www.universalpictures.nl</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#SwO6oFSwKiNOc9k2-qIHqg0szTg=">
+    <wolff:name>Jonathan Elbers</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#mjwnj38p3b0Tq0zGuMxyvCvby1w=">
+    <wolff:name>Ben Whishaw</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#7N9_3lQMFQW3usWmuEVy52hA8x8=">
+    <wolff:name>Katja Herbers</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/bridge-of-spies">
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#_nBdqzZc2--OMcHs8Dh9hRmSDfc="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#4-hbEuwG-4_HKnUG4PVpVH-YgxY="/>
+    <wolff:language>Engels</wolff:language>
+    <wolff:releaseDate>25 november 2015</wolff:releaseDate>
+    <wolff:genre>Drama</wolff:genre>
+    <wolff:link>http://www.bridgeofspies.nl</wolff:link>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#css1xmDaniN8mTJmhqZT_KlAtMw="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#hEufEG-vA9hGE3F584Tt9gn9If4="/>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#9lsHWZdjhFPShD-r_bclCB4e6WQ="/>
+    <wolff:duration>141 minuten</wolff:duration>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#23PN40Wm0t0Kmv6e_VH0IbKBB6c="/>
+    <wolff:genre>Thriller</wolff:genre>
+    <wolff:name>Bridge of Spies</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#xC-XBZdvd_3XxD93bQRAfRl03IQ=">
+    <wolff:name>Roeland Fernhout</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#fywxdy2lGyyViLN2MKxlWGv5CWM=">
+    <wolff:name>Victoria Koblenko</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#LTQyBlqSMwp-M80cM6FJxR3iZXY=">
+    <wolff:name>Daan Schuurmans</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/distributor#EY8OD-6H_fhlBAXhXT27H_EJDTc=">
+    <wolff:name>eOne</wolff:name>
+    <wolff:link>http://benelux.eonefilms.com/home</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#hEufEG-vA9hGE3F584Tt9gn9If4=">
+    <wolff:name>Amy Ryan</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#7pQEdAMM1TtkHAYknqbadWJWlUk=">
+    <wolff:name>Ron Howard</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/snoopy-en-charlie-brown-de-peanuts-film-3d-nl">
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#TBiZHAw7GFmNyuz8Zeif7D63hGM="/>
+    <wolff:link>http://www.snoopyfilm.nl</wolff:link>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#9lsHWZdjhFPShD-r_bclCB4e6WQ="/>
+    <wolff:genre>Animatie</wolff:genre>
+    <wolff:duration>88 minuten</wolff:duration>
+    <wolff:genre>Comedy</wolff:genre>
+    <wolff:name>Snoopy en Charlie Brown: De Peanuts Film 3D (NL)</wolff:name>
+    <wolff:genre>Familie</wolff:genre>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:releaseDate>9 december 2015</wolff:releaseDate>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#sTW4vBZzLxG8VNnhQqLPUePhqKw="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#D098vTZDPZRfoESVyFAdAhU2XI0="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#HyMudlXCuDdH7aaAqjb55HLoGRQ=">
+    <wolff:name>Édgar Ramírez</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#sgCT4kCgGNVF4GOOQR4vv70tJkA=">
+    <wolff:name>John Madden</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/the-night-before">
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#oiyuDGTcdN0MMKPHL19v6QgK-0E="/>
+    <wolff:releaseDate>3 december 2015</wolff:releaseDate>
+    <wolff:duration>101 minuten</wolff:duration>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#xhF1rFO9IZWDoOFOuN8vR-LTHqY="/>
+    <wolff:genre>Comedy</wolff:genre>
+    <wolff:name>The Night Before</wolff:name>
+    <wolff:language>Engels</wolff:language>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#wwE2A4-VidafzTPJs-9eWbTIm2I="/>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#1mS5-LxGTUlczPEa738k2KjWdKk="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#VwxKZsbzxcQQC-xtk1J6Uk5Ahh0="/>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#wWIZybUYBIoQWVF4X8rr7_a9gmY="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#zwAm5tN3Q11Wy-zUJ5iONkdqCAw=">
+    <wolff:name>Michael Madsen</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#23PN40Wm0t0Kmv6e_VH0IbKBB6c=">
+    <wolff:name>Steven Spielberg</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#rAq5UkMIRnnoh8Os_V01p-hVJuU=">
+    <wolff:name>Gerard Ekdom</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#VwxKZsbzxcQQC-xtk1J6Uk5Ahh0=">
+    <wolff:name>Anthony Mackie</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/mannenharten-2">
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#D7p3mj6HA9awO6cacjc7yk_37Qw="/>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:genre>Comedy</wolff:genre>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#0OoA6lZgmya8zednXoI_O6gMYe8="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#LTQyBlqSMwp-M80cM6FJxR3iZXY="/>
+    <wolff:duration>90 minuten</wolff:duration>
+    <wolff:name>Mannenharten 2</wolff:name>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#Dz1T0hnP-wQdaKEGKIeexU5kpgM="/>
+    <wolff:genre>Romantiek</wolff:genre>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#-zEEj9K_VW1Ot18xSUD5_g-78AE="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#7N9_3lQMFQW3usWmuEVy52hA8x8="/>
+    <wolff:releaseDate>17 december 2015</wolff:releaseDate>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#-YAwlrPE1F69xt2rGzmtlwFaO58="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#HtwAApC0LxOne-p5n2lrmwWeR8Q=">
+    <wolff:name>Bill Nighy</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#t2bsCsuFBONO1XpNOoGSKBDFCFo=">
+    <wolff:name>Marcel Hensema</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/distributor#D7p3mj6HA9awO6cacjc7yk_37Qw=">
+    <wolff:name>Dutch Filmworks BV</wolff:name>
+    <wolff:link>http://www.dfw.nl</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/publieke-werken">
+    <wolff:name>Publieke Werken</wolff:name>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#84HZphbTaDmB_xRIHOqg4Cvx1ww="/>
+    <wolff:duration>115 minuten</wolff:duration>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:genre>Drama</wolff:genre>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#MBAu6kcRDLA1-4WrY_fwOlFd3n0="/>
+    <wolff:releaseDate>10 december 2015</wolff:releaseDate>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#iy9sdtHRmxLbGxwCMfhC_28fUlg="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#zUrTsriM7NldPzZ7pOcgv2OdB8w="/>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#_xvNy-25a5_DWESfWLgiEuqPFyw="/>
+    <wolff:link>http://www.publiekewerkendefilm.nl</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/snoopy-en-charlie-brown-de-peanuts-film-nl">
+    <wolff:duration>88 minuten</wolff:duration>
+    <wolff:genre>Comedy</wolff:genre>
+    <wolff:releaseDate>9 december 2015</wolff:releaseDate>
+    <wolff:name>Snoopy en Charlie Brown: De Peanuts Film (NL)</wolff:name>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#9lsHWZdjhFPShD-r_bclCB4e6WQ="/>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#sTW4vBZzLxG8VNnhQqLPUePhqKw="/>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:genre>Familie</wolff:genre>
+    <wolff:link>http://www.snoopyfilm.nl</wolff:link>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#D098vTZDPZRfoESVyFAdAhU2XI0="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#TBiZHAw7GFmNyuz8Zeif7D63hGM="/>
+    <wolff:genre>Animatie</wolff:genre>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#QhFGJvzWFFzQyXDQzl1uJFKjwEY=">
+    <wolff:name>Maggie Smith</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#-zEEj9K_VW1Ot18xSUD5_g-78AE=">
+    <wolff:name>Mark Cloe, de</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/in-the-heart-of-the-sea-3d">
+    <wolff:language>Engels</wolff:language>
+    <wolff:name>In the Heart of the Sea 3D</wolff:name>
+    <wolff:genre>Actie</wolff:genre>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#RJp09zNw_V0pnwWQns9dhvzF2C0="/>
+    <wolff:genre>Avontuur</wolff:genre>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#VHB8Mpyu-hzTfU7H0mnEw-upMDo="/>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#9lsHWZdjhFPShD-r_bclCB4e6WQ="/>
+    <wolff:releaseDate>10 december 2015</wolff:releaseDate>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#7pQEdAMM1TtkHAYknqbadWJWlUk="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#hEuIuqvVlB_jnCxPC7tPhzY1rQg="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#BTSEdyS1Hg7mVFyagFcezMR_dx4="/>
+    <wolff:duration>121 minuten</wolff:duration>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#mjwnj38p3b0Tq0zGuMxyvCvby1w="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#MBAu6kcRDLA1-4WrY_fwOlFd3n0=">
+    <wolff:name>Gijs Scholten van Aschat</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/distributor#_xvNy-25a5_DWESfWLgiEuqPFyw=">
+    <wolff:name>September Film Distribution</wolff:name>
+    <wolff:link>http://septemberfilm.nl/</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#iBOa60vZ5r3FEMAS4wiug7CHX6E=">
+    <wolff:name>Siem van Leeuwen</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#wrgYfUQ894hgu6-2yHhsnyADHy4=">
+    <wolff:name>Jennifer Jason Leigh</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#x5psgoYEumvYTMcYjJOgdGJS8NQ=">
+    <wolff:name>Matthias Temmermans</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#NZjes03GIvQ070oQI5qIikJPgLM=">
+    <wolff:name>Svenno van der Kleij</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#OlV1rJSaKlQ9Idu19OmOTS761Lo=">
+    <wolff:name>Carrie Fisher</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/star-wars-the-force-awakens-3d">
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#JfepuQNqF7UyqLM4gUESo7gI84I="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#b8L4Ivj4ToITNZZpxE1mcFFMoWY="/>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#cXr-HZE7MqooSwvm1lSYvbGBMWk="/>
+    <wolff:language>Engels</wolff:language>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#POWq58yj9eF88fN6ebUIVufBMr0="/>
+    <wolff:duration>135 minuten</wolff:duration>
+    <wolff:releaseDate>16 december 2015</wolff:releaseDate>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#2LJKeAeds13wtoriLHJxZ0wfjyo="/>
+    <wolff:link>http://www.starwars.com/the-force-awakens/</wolff:link>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#daeyZ_qKgib0GlFwHXdaDIFzrTY="/>
+    <wolff:genre>Fantasy</wolff:genre>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#OlV1rJSaKlQ9Idu19OmOTS761Lo="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#7R49Qd7Q9FZxFwbfCy9XkDLMnag="/>
+    <wolff:genre>Actie</wolff:genre>
+    <wolff:genre>Avontuur</wolff:genre>
+    <wolff:name>Star Wars: The Force Awakens 3D</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/the-hunger-games-mockingjay-part-2">
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#7iR5kMCaPGwmax26eWffh2-w0zc="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#wttMGa3MuHCuvHygyNsq56q9X50="/>
+    <wolff:genre>Avontuur</wolff:genre>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#NuCaf6NR5SqU1By5fULNjqrEf4o="/>
+    <wolff:genre>Actie</wolff:genre>
+    <wolff:name>The Hunger Games: Mockingjay - Part 2</wolff:name>
+    <wolff:genre>Drama</wolff:genre>
+    <wolff:releaseDate>18 november 2015</wolff:releaseDate>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#XeUWgOPufcTWC-XQyFN6lYlRpeo="/>
+    <wolff:duration>136 minuten</wolff:duration>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#xyXP8uqHgbfIoOgOV7C2_CDEKCs="/>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#_JyctnPFxfsjGKuvASic_0Q9QnM="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#9waw8G_vn-KBPsBH4GMjkHBFpKo="/>
+    <wolff:language>Engels</wolff:language>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/fashion-chicks">
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#QaxUySh2N6z1SWh6uXwmRRXyfkQ="/>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#SwO6oFSwKiNOc9k2-qIHqg0szTg="/>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:duration>93 minuten</wolff:duration>
+    <wolff:genre>Comedy</wolff:genre>
+    <wolff:releaseDate>2 december 2015</wolff:releaseDate>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#3-uJxUu3_JfVo6qQQPZbHMlDy5Q="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#fywxdy2lGyyViLN2MKxlWGv5CWM="/>
+    <wolff:name>Fashion Chicks</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#NuCaf6NR5SqU1By5fULNjqrEf4o=">
+    <wolff:name>Francis Lawrence</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#BTSEdyS1Hg7mVFyagFcezMR_dx4=">
+    <wolff:name>Chris Hemsworth</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#-YAwlrPE1F69xt2rGzmtlwFaO58=">
+    <wolff:name>Barry Atsma</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#css1xmDaniN8mTJmhqZT_KlAtMw=">
+    <wolff:name>Alan Alda</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl//distributor#nhtexZuC0xXdpOjTCuhY2Nu6wQ4=">
+    <wolff:name>Lemming Film Distributie</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#0OoA6lZgmya8zednXoI_O6gMYe8=">
+    <wolff:name>Jeroen Spitzenberger</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#4-hbEuwG-4_HKnUG4PVpVH-YgxY=">
+    <wolff:name>Tom Hanks</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#UAni8jWhk7y5XqOhnhs7rc4Va0s=">
+    <wolff:name>Judi Dench</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/mega-mindy-vs-rox">
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#rRmLyuHBgA978x4HpSlUeUNWXGA="/>
+    <wolff:name>Mega Mindy vs. ROX</wolff:name>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#_JyctnPFxfsjGKuvASic_0Q9QnM="/>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:genre>Familie</wolff:genre>
+    <wolff:link>http://www.megamindyversusrox.nl</wolff:link>
+    <wolff:releaseDate>9 december 2015</wolff:releaseDate>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#x5psgoYEumvYTMcYjJOgdGJS8NQ="/>
+    <wolff:duration>85 minuten</wolff:duration>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#C-OLEeqYssUfNLls6QbRFy2QSuU="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#3-uJxUu3_JfVo6qQQPZbHMlDy5Q=">
+    <wolff:name>Liza Sips</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#VHB8Mpyu-hzTfU7H0mnEw-upMDo=">
+    <wolff:name>Brendan Gleeson</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#aHQ_pdQL_dPx9UZtzRLUiHdf5rw=">
+    <wolff:name>Ramon Andriessen</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#emr0fGBhbc1zgE2twSgcFqoJ7RE=">
+    <wolff:name>Oliver Masucci</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#cs4QiZZN6wHSrZ1v1zql9c6XDoE=">
+    <wolff:name>Michael Dougherty</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#JfepuQNqF7UyqLM4gUESo7gI84I=">
+    <wolff:name>Mark Hamill</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#IFAzduQwYJWVZ2xr2iTFFexSCA8=">
+    <wolff:name>Samuel L. Jackson</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/dummie-de-mummie-en-de-sfinx-van-shakaba">
+    <wolff:releaseDate>9 december 2015</wolff:releaseDate>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#x1MHkTmCBOVIuyp9J6fP_5h1OVA="/>
+    <wolff:genre>Familie</wolff:genre>
+    <wolff:name>Dummie de Mummie en de Sfinx van Shakaba</wolff:name>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#D7p3mj6HA9awO6cacjc7yk_37Qw="/>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#HZw3PD1c0qt7f21KHlw729M7DEA="/>
+    <wolff:duration>80 minuten</wolff:duration>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#t2bsCsuFBONO1XpNOoGSKBDFCFo="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#xC-XBZdvd_3XxD93bQRAfRl03IQ="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#eY7J7uRWGdtOp08WdnBWqCYDotc="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#tKZoDxUsmBY8X1C-mNBdFwvTxZ4=">
+    <wolff:name>Jandino Asporaat</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#IOO9KQm0LZLkcfnpWn-olhFvOJY=">
+    <wolff:name>Kees Prins</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#7R49Qd7Q9FZxFwbfCy9XkDLMnag=">
+    <wolff:name>Harrison Ford</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#84HZphbTaDmB_xRIHOqg4Cvx1ww=">
+    <wolff:name>Rifka Lodeizen</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/buurman-en-buurman-al-40-jaar-beste-vrienden">
+    <wolff:distributor rdf:resource="http://www.wolff.nl//distributor#nhtexZuC0xXdpOjTCuhY2Nu6wQ4="/>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#BXBsLF5p5QF9GqlF92x9ynvtSd8="/>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:duration>56 minuten</wolff:duration>
+    <wolff:genre>Familie</wolff:genre>
+    <wolff:releaseDate>31 december 2015</wolff:releaseDate>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#iBOa60vZ5r3FEMAS4wiug7CHX6E="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#IOO9KQm0LZLkcfnpWn-olhFvOJY="/>
+    <wolff:name>Buurman &amp; Buurman  al 40 jaar beste vrienden!</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#rUOMQRJYO4x822ngecdsLOg-xLs=">
+    <wolff:name>Sam Mendes</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/the-good-dinosaur-nl">
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#aHQ_pdQL_dPx9UZtzRLUiHdf5rw="/>
+    <wolff:releaseDate>25 november 2015</wolff:releaseDate>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#rAq5UkMIRnnoh8Os_V01p-hVJuU="/>
+    <wolff:language>Nederlands</wolff:language>
+    <wolff:duration>100 minuten</wolff:duration>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#NZjes03GIvQ070oQI5qIikJPgLM="/>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#A3UdbG1MMY0dZGWxSe5PoL_4a4s="/>
+    <wolff:genre>Familie</wolff:genre>
+    <wolff:genre>Animatie</wolff:genre>
+    <wolff:name>The Good Dinosaur (NL)</wolff:name>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#cXr-HZE7MqooSwvm1lSYvbGBMWk="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#t6RU5ITTsnfuBUaHy8gbaJVr7Q0=">
+    <wolff:name>Dev Patel</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#lI2BNCZCYZ_Osf24-whkAKxunKE=">
+    <wolff:name>Tim Roth</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/distributor#QaxUySh2N6z1SWh6uXwmRRXyfkQ=">
+    <wolff:name>Just Film Distribution</wolff:name>
+    <wolff:link>http://www.justonline.nl/</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#y8Q7f7gU_Zjxp68DzpAVUk6Bpvk=">
+    <wolff:name>Bruce Dern</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#POWq58yj9eF88fN6ebUIVufBMr0=">
+    <wolff:name>Daisy Ridley</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#RJp09zNw_V0pnwWQns9dhvzF2C0=">
+    <wolff:name>Cillian Murphy</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#zkcYwZ83zgdwj7NQN2WU-roje18=">
+    <wolff:name>Toni Collette</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#5ZOh-zQpw1dkcAiHzWMz1XX6IYs=">
+    <wolff:name>Luke Bracey</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#2LJKeAeds13wtoriLHJxZ0wfjyo=">
+    <wolff:name>John Boyega</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#TBiZHAw7GFmNyuz8Zeif7D63hGM=">
+    <wolff:name>Willem de Groot</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#C-OLEeqYssUfNLls6QbRFy2QSuU=">
+    <wolff:name>Jim Bakkum</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#_nBdqzZc2--OMcHs8Dh9hRmSDfc=">
+    <wolff:name>Sebastian Koch</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#BXBsLF5p5QF9GqlF92x9ynvtSd8=">
+    <wolff:name>Marek Bene</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#IUh6qlUfpgrpvL-0KgTMq7vIeL0=">
+    <wolff:name>Ralph Fiennes</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#jbtJ6vC6fH6WVYHwalRexXf1uD0=">
+    <wolff:name>Monica Bellucci</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#RbEHIkl8hrACj8SHzj2PxyKg6S8=">
+    <wolff:name>Jelle de Jonge</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/the-hunger-games-mockingjay-part-2-3d">
+    <wolff:director rdf:resource="http://www.wolff.nl/person#sL7nl-vqVKXkLyL1hqKB-BbQYGA="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#XeUWgOPufcTWC-XQyFN6lYlRpeo="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#7iR5kMCaPGwmax26eWffh2-w0zc="/>
+    <wolff:name>The Hunger Games: Mockingjay - Part 2 3D</wolff:name>
+    <wolff:releaseDate>18 november 2015</wolff:releaseDate>
+    <wolff:language>Engels</wolff:language>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#9waw8G_vn-KBPsBH4GMjkHBFpKo="/>
+    <wolff:duration>136 minuten</wolff:duration>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#Wa_D9FS7FoOWr3y9hoqL2RML9kE="/>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#_JyctnPFxfsjGKuvASic_0Q9QnM="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#b8L4Ivj4ToITNZZpxE1mcFFMoWY=">
+    <wolff:name>Oscar Isaac</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#l26qBJW92rXuA8njWxysGKYTCG8=">
+    <wolff:name>Daniel Craig</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#wttMGa3MuHCuvHygyNsq56q9X50=">
+    <wolff:name>Elizabeth Banks</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#wwE2A4-VidafzTPJs-9eWbTIm2I=">
+    <wolff:name>Lizzy Caplan</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/star-wars-the-force-awakens">
+    <wolff:name>Star Wars: The Force Awakens</wolff:name>
+    <wolff:language>Engels</wolff:language>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#OlV1rJSaKlQ9Idu19OmOTS761Lo="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#7R49Qd7Q9FZxFwbfCy9XkDLMnag="/>
+    <wolff:genre>Fantasy</wolff:genre>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#b8L4Ivj4ToITNZZpxE1mcFFMoWY="/>
+    <wolff:duration>135 minuten</wolff:duration>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#JfepuQNqF7UyqLM4gUESo7gI84I="/>
+    <wolff:link>http://www.starwars.com/the-force-awakens/</wolff:link>
+    <wolff:genre>Avontuur</wolff:genre>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#POWq58yj9eF88fN6ebUIVufBMr0="/>
+    <wolff:releaseDate>16 december 2015</wolff:releaseDate>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#2LJKeAeds13wtoriLHJxZ0wfjyo="/>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#daeyZ_qKgib0GlFwHXdaDIFzrTY="/>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#cXr-HZE7MqooSwvm1lSYvbGBMWk="/>
+    <wolff:genre>Actie</wolff:genre>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#Wa_D9FS7FoOWr3y9hoqL2RML9kE=">
+    <wolff:name>Donald Sutherland</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#qbdVCWC3lCgi9Pk2HclDTOeBHLM=">
+    <wolff:name>Ericson Core</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#XeUWgOPufcTWC-XQyFN6lYlRpeo=">
+    <wolff:name>Liam Hemsworth</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#VikfP8baSoDKfoMVt80l9VS6Mwk=">
+    <wolff:name>Richard Gere</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#9waw8G_vn-KBPsBH4GMjkHBFpKo=">
+    <wolff:name>Jennifer Lawrence</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#LcRCWET-gI3d8smod_6f9q8ckg0=">
+    <wolff:name>Quentin Tarantino</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/er-ist-wieder-da">
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#D7p3mj6HA9awO6cacjc7yk_37Qw="/>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#M-7SVTooH1GjnO0Z2zlAslwv4oU="/>
+    <wolff:language>Duits</wolff:language>
+    <wolff:duration>110 minuten</wolff:duration>
+    <wolff:genre>Comedy</wolff:genre>
+    <wolff:releaseDate>26 november 2015</wolff:releaseDate>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#emr0fGBhbc1zgE2twSgcFqoJ7RE="/>
+    <wolff:name>Er Ist Wieder Da</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#iy9sdtHRmxLbGxwCMfhC_28fUlg=">
+    <wolff:name>Joram Lürsen</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#7iR5kMCaPGwmax26eWffh2-w0zc=">
+    <wolff:name>Josh Hutcherson</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/films/the-hateful-eight">
+    <wolff:language>Engels</wolff:language>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#wrgYfUQ894hgu6-2yHhsnyADHy4="/>
+    <wolff:genre>Western</wolff:genre>
+    <wolff:releaseDate>7 januari 2016</wolff:releaseDate>
+    <wolff:name>The Hateful Eight Acties</wolff:name>
+    <wolff:director rdf:resource="http://www.wolff.nl/person#LcRCWET-gI3d8smod_6f9q8ckg0="/>
+    <wolff:duration>167 minuten</wolff:duration>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#zwAm5tN3Q11Wy-zUJ5iONkdqCAw="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#bDTt4qX2Po-F0N6Oyy8XDWszLJU="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#lI2BNCZCYZ_Osf24-whkAKxunKE="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#y8Q7f7gU_Zjxp68DzpAVUk6Bpvk="/>
+    <wolff:distributor rdf:resource="http://www.wolff.nl/distributor#EY8OD-6H_fhlBAXhXT27H_EJDTc="/>
+    <wolff:actor rdf:resource="http://www.wolff.nl/person#IFAzduQwYJWVZ2xr2iTFFexSCA8="/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#daeyZ_qKgib0GlFwHXdaDIFzrTY=">
+    <wolff:name>Jeffrey (J.J.) Abrams</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#D098vTZDPZRfoESVyFAdAhU2XI0=">
+    <wolff:name>Matheu Hinzen</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/distributor#_JyctnPFxfsjGKuvASic_0Q9QnM=">
+    <wolff:name>Independent Films Nederland BV</wolff:name>
+    <wolff:link>http://www.independentfilms.nl</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#rRmLyuHBgA978x4HpSlUeUNWXGA=">
+    <wolff:name>Free Souffriau</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#eY7J7uRWGdtOp08WdnBWqCYDotc=">
+    <wolff:name>Jennifer Hoffman</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#sTW4vBZzLxG8VNnhQqLPUePhqKw=">
+    <wolff:name>Steve Martino</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#HZw3PD1c0qt7f21KHlw729M7DEA=">
+    <wolff:name>Julian Ras</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#x1MHkTmCBOVIuyp9J6fP_5h1OVA=">
+    <wolff:name>Pim van Hoeve</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#zUrTsriM7NldPzZ7pOcgv2OdB8w=">
+    <wolff:name>Jacob Derwig</wolff:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/distributor#9lsHWZdjhFPShD-r_bclCB4e6WQ=">
+    <wolff:name>Warner Bros. Pictures International Holland</wolff:name>
+    <wolff:link>http://www.warnerbros.nl</wolff:link>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.wolff.nl/person#M-7SVTooH1GjnO0Z2zlAslwv4oU=">
+    <wolff:name>David Wnendt</wolff:name>
+  </rdf:Description>
+</rdf:RDF>
