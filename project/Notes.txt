@@ -1,0 +1,19 @@
+What to do:
+1. get the movie dataset, and convert it to RDF dataset
+2. enrich the RDF dataset with self-developed ontology
+2. link the dataset to DBPedia
+3. enrich the data with established ontologies
+4. run some SPARQL queries finding in data 
+5. show some reasonings
+
+
+Minimum things to do:
+- self-developed ontology (at least 5 classes)
+- enrich the original data with some semantic web facility
+- demonstrate some non-trivial reasonings
+
+
+This project generally does what the linked open data field intended to do.
+
+-----
+http://www.movieontology.org/downloads/
