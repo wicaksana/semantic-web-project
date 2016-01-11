@@ -39,7 +39,12 @@ public class WolffQuery {
 		
 		InfModel infModel = ModelFactory.createInfModel(reasoner, data);
 		
-		// display all distributors
+		// Query: which movie is starred by Monica Bellucci? 
+		//        in RDF file, movie Spectre has property 'hasActor' which refers to Monica Bellucci.
+		// 		  In the ontology file, the inverse of 'hasActor' is defined by 'becomesActorOf'.
+		//        Thus, the query below should result in Spectre (due to the inference).
+		//		  But somehow, it shows nothing.
+		//		  (Continued in the next comment)
 		String queryString = "PREFIX cat: <http://dbpedia.org/resource/Category:> " +
 			  	 "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " +
 			  	 "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
@@ -59,10 +64,13 @@ public class WolffQuery {
 		
 		ResultSetFormatter.out(System.out, results, query);
 		
+		// Surprisingly, the following lines result all inferences from resource 'Monica Bellucci', and
+		// one of those is the inference that she becomesActorOf Spectre.
+		// But this inference is not displayed in the previous SPARQL query.
 		Resource belucci =  infModel.getResource("http://www.wolff.nl/person#Monica_Bellucci");
 		for(StmtIterator i = infModel.listStatements(belucci, (Property)null, (RDFNode)null); i.hasNext(); ) {
-            Statement stmt = i.nextStatement();
-            System.out.println(" - " + PrintUtil.print(stmt));
+			Statement stmt = i.nextStatement();
+			System.out.println(" - " + PrintUtil.print(stmt));
 		}
 	}
 
