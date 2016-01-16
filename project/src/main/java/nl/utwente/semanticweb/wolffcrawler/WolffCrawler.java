@@ -17,10 +17,17 @@ import java.util.Set;
 
 import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.ontology.OntModel;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.sparql.core.DatasetImpl;
 import org.apache.jena.util.FileManager;
+import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.RDF;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -35,19 +42,23 @@ public class WolffCrawler {
 	private final static String WOLFF = "http://www.wolff.nl";
 	private final static String WOLFF_OWL = WOLFF + "/2016/wolff.owl";
 	private final static String NS = WOLFF_OWL + "#";
-	private final static String MOVIE = WOLFF + "/movie" + "#";
-	private final static String PERSON = WOLFF + "/person" + "#";
-	private final static String GENRE = WOLFF + "/genre" + "#";
-	private final static String COMPANY = WOLFF + "/company" + "#";
+	private final static String MOVIE = WOLFF_OWL + "/movie" + "#";
+	private final static String PERSON = WOLFF_OWL + "/person" + "#";
+	private final static String GENRE = WOLFF_OWL + "/genre" + "#";
+	private final static String COMPANY = WOLFF_OWL + "/company" + "#";
+	
+	private final static String DBR = "http://dbpedia.org/resource/";
+	private final static String DBR_NL = "http://nl.dbpedia.org/resource/";
+	private final static String DBR_DE = "http://de.dbpedia.org/resource/";
+	
 	private final static String REF_ONT = "wolff.owl";
 	private final static String OUTPUT = "wolff.rdf";
 	
-	private final MessageDigest digest;
+	private final OntModel m;
 	
-	private final Model m;
-	private final OntModel refOnt;
+	private final static String[] DUTCH_MONTH = {"januari", "februari", "maart", "april", "mei", "juni", 
+												 "juli", "augustus", "september", "oktober", "november", "december"};
 	
-	private final static String[] DUTCH_MONTH = {"januari", "februari", "maart", "april", "mei", "juni", "juli", "augustus", "september", "oktober", "november", "december"};
 	private final static Map<String, String> LANGUAGE;
 	static {
 		LANGUAGE = new HashMap<String, String>();
@@ -57,6 +68,7 @@ public class WolffCrawler {
 		LANGUAGE.put("duits", "German");
 	}
 	
+	//to translate Dutch genre to English
 	private static Map<String, String> GENRE_MAP;
 	static {
 		GENRE_MAP = new HashMap<String, String>();
@@ -74,29 +86,21 @@ public class WolffCrawler {
 	}
 	
 	public WolffCrawler() throws NoSuchAlgorithmException {
-		
-		digest = MessageDigest.getInstance("SHA1");
-		m = ModelFactory.createDefaultModel();
+		//load ontology file
+		System.out.println("*) load ontology file....");
+		m = ModelFactory.createOntologyModel();
+		try {
+			m.read(FileManager.get().open(REF_ONT), "", "RDF/XML");
+		} catch(NullPointerException e) {
+			System.out.print("Something error with reading the ontology file: ");
+			e.printStackTrace();
+		}
+	
 		m.setNsPrefix("wolff", NS);
 		m.setNsPrefix("wolff-m", MOVIE);
 		m.setNsPrefix("wolff-p", PERSON);
 		m.setNsPrefix("wolff-g", GENRE);
 		m.setNsPrefix("wolff-c", COMPANY);
-		
-		//load ontology file
-		System.out.println("*) load ontology file....");
-		refOnt = ModelFactory.createOntologyModel();
-		try {
-			refOnt.read(FileManager.get().open(REF_ONT), "", "RDF/XML");
-		} catch(NullPointerException e) {
-			e.printStackTrace();
-		}
-		
-		//create genre manually
-		for(String genre : GENRE_MAP.values()) {
-			m.createResource(GENRE + genre)
-			 .addProperty(RDF.type, refOnt.getProperty(NS + "Genre"));
-		}
 	}
 	
 	public static void main(String[] args) throws NoSuchAlgorithmException, IOException {
@@ -108,10 +112,18 @@ public class WolffCrawler {
 		System.out.println("---finish---");
 	}
 	
+	/**
+	 * save the model into a file with RDF/XML format
+	 * @throws FileNotFoundException
+	 */
 	private void save() throws FileNotFoundException {
 		m.write(new FileOutputStream(OUTPUT), "RDF/XML");
 	}
 
+	/**
+	 * parse movie index to get the movie list
+	 * @throws IOException
+	 */
 	private void parseIndex() throws IOException {
 		Document doc = Jsoup.connect(WOLFF + "/bioscopen/cinestar/").get();
 		Elements movies = doc.select(".table_agenda td[width=245] a");
@@ -126,68 +138,105 @@ public class WolffCrawler {
 		}
 	}
 
+	/**
+	 * parse each movie, and create the corresponding resources
+	 * @param url
+	 */
 	private void parseMovie(String url) {
 		Boolean is3D = false;
-		Boolean isDutch = false;
-		String movietitle = url.replace("/films/", "");
 		Document doc;
 		try {
 			doc = Jsoup.connect(WOLFF + url).get();
 		} catch (IOException e) {
 			e.printStackTrace();
 			return;
-		}
+		}		
+
+		String movietitle = doc.select("#wrapper_left h2").first().text().trim();
+		System.out.println("Movie: " + movietitle);
 		
-		// check if it is 3D movie, or dubbed in Dutch
+		// check if it is 3D movie
 		if(url.contains("-3d")) {
-			movietitle = movietitle.replace("-3d", "");
 			is3D = true;
 		}
-		if(url.contains("-nl")) {
-			movietitle = movietitle.replace("-nl", "");
-			isDutch = true;
-		}
-		
+
 		//create resource movie with the type 'Movie' and data property 'title'
-		Resource movie = m.createResource(MOVIE + movietitle);
-		movie.addProperty(RDF.type, refOnt.getProperty(NS + "Movie"))
-			 .addProperty(refOnt.getProperty(NS + "title"), doc.select("#wrapper_left h2").text().trim());
-		
-		// does m already contain resource 3D?
-		if(!m.containsResource(refOnt.getProperty(NS + "3D"))) { 
-			System.out.println("create 3D resource");
-			m.createResource(NS + "3D")
-			 .addProperty(RDF.type, refOnt.getProperty(NS + "Presentation"));
-		}
+		Resource movie = m.createResource(MOVIE + url.replace("/film/", ""));
+		movie.addProperty(RDF.type, m.getProperty(NS + "Movie"))
+			 .addProperty(m.getProperty(NS + "title"), movietitle);
+
 		//if it is 3D movie..
 		if(is3D)
-			movie.addProperty(refOnt.getProperty(NS + "hasPresentation"), m.getResource(NS + "3D"));
+			movie.addProperty(m.getProperty(NS + "hasPresentation"), m.getResource(NS + "3D"));
 
+		// does it have corresponding dbpedia resource?
+		String mResult;
+		if((mResult = SparqlQuery.movieInDbpediaEn(movietitle)) != null) {
+			System.out.println("mResult: " + mResult);
+			movie.addProperty(OWL.sameAs, mResult);
+		} else if((mResult = SparqlQuery.movieInDbpediaNl(movietitle)) != null) {
+			System.out.println("mResult: " + mResult);
+			movie.addProperty(OWL.sameAs, mResult);
+		}else if((mResult = SparqlQuery.movieInDbpediaDe(movietitle)) != null) {
+			System.out.println("mResult: " + mResult);
+			movie.addProperty(OWL.sameAs, mResult);
+		}
+		
 		//parse sidebar information
 		Elements sidebar = doc.select(".sidebar_container").get(1).select(".table_view tr td");
+		
 		for (Element element:sidebar) {
 			switch (element.select("strong").text()) {
+			//get all actors
 			case "Acteurs":
 				String[] actors = element.text().substring(8).split(", "); //Remove "Acteurs" from string
 				for(String actor : actors) {
 					Resource person = m.createResource(PERSON + actor.replace(" ", "_"));
-					person.addProperty(RDF.type, refOnt.getProperty(NS + "Person"))
-						  .addProperty(refOnt.getProperty(NS + "name"), actor.trim());
-					movie.addProperty(refOnt.getProperty(NS + "hasActor"), person);
+					person.addProperty(RDF.type, m.getProperty(NS + "Person"))
+						  .addProperty(m.getProperty(NS + "name"), actor.trim());
+					movie.addProperty(m.getProperty(NS + "hasActor"), person);
+					
+					//check if the actor has dbpedia page. Describe as sameAs if true
+					String qResult;
+					if((qResult = SparqlQuery.personInDbpediaEn(actor)) != null) { // in dbpedia.org
+						person.addProperty(OWL.sameAs, DBR + qResult);
+					} else if((qResult = SparqlQuery.personInDbpediaNl(actor)) != null) { // in nl.dbpedia.org
+						person.addProperty(OWL.sameAs, DBR_NL + qResult);
+					} else if((qResult = SparqlQuery.personInDbpediaDe(actor)) != null) { // in de.dbpedia.org
+						person.addProperty(OWL.sameAs, DBR_DE + qResult);
+					}
 				}
 				break;
-				
+			
+			//get the director
 			case "Regie": //director
 				String nameString = element.text().substring(6).toString().trim(); //Remove "Regie" from string
-				Resource person = m.createResource(PERSON + encode(nameString));
-				person.addProperty(refOnt.getProperty(NS + "name"), nameString);
-				movie.addProperty(refOnt.getProperty(NS + "hasDirector"), person);
+				Resource person = m.createResource(PERSON + nameString.replace(" ", "_"));
+				person.addProperty(m.getProperty(NS + "name"), nameString);
+				movie.addProperty(m.getProperty(NS + "hasDirector"), person);
+				
+				//check if the director has dbpedia page. Describe as sameAs if true 
+				String qResult;
+				if((qResult = SparqlQuery.personInDbpediaEn(nameString)) != null) { // in dbpedia.org
+					person.addProperty(OWL.sameAs, DBR + qResult);
+				} else if((qResult = SparqlQuery.personInDbpediaNl(nameString)) != null) { // in nl.dbpedia.org
+					person.addProperty(OWL.sameAs, DBR_NL + qResult);
+				} else if((qResult = SparqlQuery.personInDbpediaDe(nameString)) != null) { // in de.dbpedia.org
+					person.addProperty(OWL.sameAs, DBR_DE + qResult);
+				}
+				
+				// a little bit cheating for JJ Abrams
+				if(nameString.equals("Jeffrey (J.J.) Abrams")) {
+					person.addProperty(OWL.sameAs, DBR + "J._J._Abrams");
+				}
 				break;
 
+			//get the duration
 			case "Speelduur":
-				movie.addProperty(refOnt.getProperty(NS + "duration"), last(element).toString().trim().split(" ")[0], XSDDatatype.XSDint);
+				movie.addProperty(m.getProperty(NS + "duration"), last(element).toString().trim().split(" ")[0], XSDDatatype.XSDint);
 				break;
 
+			//get the genre
 			case "Genre":
 				String[] genres = last(element).toString().toLowerCase().split(", ");
 				for (String genreName:genres) {
@@ -196,12 +245,13 @@ public class WolffCrawler {
 					else { //unknown genre; report it and create new resource to acommodate
 						System.out.println("*) another genre found: " + genreName);
 						m.createResource(GENRE + genreName)
-						 .addProperty(RDF.type, refOnt.getProperty(NS + "Genre"));
+						 .addProperty(RDF.type, m.getProperty(NS + "Genre"));
 					}						
-					movie.addProperty(refOnt.getProperty(NS + "hasGenre"), m.getResource(GENRE + genreName));
+					movie.addProperty(m.getProperty(NS + "hasGenre"), m.getResource(GENRE + genreName));
 				}					
 				break;
 			
+			//get the language presentation
 			case "Taal":
 				String lang = last(element).toString().trim().toLowerCase();
 				if(LANGUAGE.containsKey(lang)) {
@@ -210,37 +260,40 @@ public class WolffCrawler {
 					System.out.println("another language found: " + lang);
 				}
 
-				movie.addProperty(refOnt.getProperty(NS + "language"), lang);	
+				movie.addProperty(m.getProperty(NS + "language"), lang);	
 				break;
 			
+			//get the release date
 			case "In de bioscoop sinds":
 				String[] releasedate = last(element).toString().trim().split(" ");
 				String day = releasedate[0];
 				String month = String.valueOf((Arrays.asList(DUTCH_MONTH).indexOf(releasedate[1].toLowerCase()) + 1));
 				String year = releasedate[2];
 				String formatteddate = year + "-" + month + "-" + day + "T00:00:00";
-				movie.addProperty(refOnt.getProperty(NS + "releaseDate"), formatteddate, XSDDatatype.XSDdateTime);			
+				movie.addProperty(m.getProperty(NS + "releaseDate"), formatteddate, XSDDatatype.XSDdateTime);			
 				break;
 			
+			//get the local distributor
 			case "Distributeur":
 				Node distributorLink = (Node) last(element);
 				Resource distributorResource;
 				if (distributorLink instanceof Element) {
 					distributorResource = m.createResource(COMPANY + ((Element) distributorLink).text().replace(" ", "_"));
-					distributorResource.addProperty(refOnt.getProperty(NS + "companyURL"), distributorLink.attr("href"));
-					distributorResource.addProperty(refOnt.getProperty(NS + "companyName"), ((Element) distributorLink).text());
-					movie.addProperty(refOnt.getProperty(NS + "isDistributedBy"), distributorResource);
+					distributorResource.addProperty(m.getProperty(NS + "companyURL"), distributorLink.attr("href"));
+					distributorResource.addProperty(m.getProperty(NS + "companyName"), ((Element) distributorLink).text());
+					movie.addProperty(m.getProperty(NS + "isDistributedBy"), distributorResource);
 				} else {
 					distributorResource = m.createResource(COMPANY + distributorLink.toString().replace(" ", "_"));
-					distributorResource.addProperty(refOnt.getProperty(NS + "companyName"), distributorLink.toString());
+					distributorResource.addProperty(m.getProperty(NS + "companyName"), distributorLink.toString());
 				}
 					
-				movie.addProperty(refOnt.getProperty(NS + "isDistributedBy"), distributorResource);
+				movie.addProperty(m.getProperty(NS + "isDistributedBy"), distributorResource);
 				break;
 			}
 		}
 		
 	}
+
 
 	/**
 	 * Get last child node of element
@@ -251,14 +304,4 @@ public class WolffCrawler {
 		List<Node> nodes = element.childNodes();
 		return nodes.get(nodes.size()-1);
 	}
-
-	/**
-	 * Encode string to create random url per name
-	 * @param name
-	 * @return
-	 */
-	private String encode(String name) {
-		return Base64.encode(digest.digest(name.getBytes())).replace('+', '-').replace('/', '_');
-	}
-
 }
