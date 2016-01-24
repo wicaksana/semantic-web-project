@@ -59,7 +59,7 @@ public class WolffQuery {
 		  			"<http://www.wolff.nl/person#Monica_Bellucci> <http://www.wolff.nl/2016/wolff.owl#becomesActorOf> ?movie ." +
 			  	 "}";
 		Query query = QueryFactory.create(queryString);
-		QueryExecution qe = QueryExecutionFactory.create(query, data);
+		QueryExecution qe = QueryExecutionFactory.create(query, infModel);
 		ResultSet results = qe.execSelect();
 		
 		ResultSetFormatter.out(System.out, results, query);
