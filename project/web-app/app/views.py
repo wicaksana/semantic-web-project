@@ -2,7 +2,7 @@ from app import app
 from flask import render_template
 from SPARQLWrapper import SPARQLWrapper, JSON
 from bs4 import BeautifulSoup
-from urllib import request
+from urllib3 import request
 
 
 WOLFF_OWL = "http://www.wolff.nl/2016/wolff.owl";
