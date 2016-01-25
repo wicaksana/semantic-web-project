@@ -2,10 +2,10 @@ from app import app
 from flask import render_template
 from SPARQLWrapper import SPARQLWrapper, JSON
 from bs4 import BeautifulSoup
-from urllib3 import request
+from urllib import request
 
 
-WOLFF_OWL = "http://www.wolff.nl/2016/wolff.owl";
+WOLFF_OWL = "http://www.wolff.nl/2016/wolff.owl"
 NS = WOLFF_OWL + "#"
 MOVIE = WOLFF_OWL + "/movie" + "#"
 PERSON = WOLFF_OWL + "/person" + "#"
@@ -19,9 +19,13 @@ PREFIX = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " \
          "PREFIX wolff: <http://www.wolff.nl/2016/wolff.owl#> " \
          "PREFIX afn: <http://jena.apache.org/ARQ/function#>" \
          "PREFIX dc: <http://purl.org/dc/terms/>" \
-         "PREFIX movie: <http://data.linkedmdb.org/resource/movie/>"
+         "PREFIX movie: <http://data.linkedmdb.org/resource/movie/>" \
+         "PREFIX owl: <http://www.w3.org/2002/07/owl#>" \
+         "PREFIX dbo: <http://dbpedia.org/ontology/>" \
+         "PREFIX dct: <http://purl.org/dc/terms/>"
 
-sparql = SPARQLWrapper("http://localhost:3030/wolff2/query")
+# sparql = SPARQLWrapper("http://localhost:3030/wolff2/query")
+sparql = SPARQLWrapper("http://localhost:3030/test5/query")
 
 
 @app.route('/')
@@ -159,8 +163,9 @@ def get_person(name):
 
     url_img = get_image(uri)
     collaboration = get_collaboration(uri)
+    oscar_winners = get_oscar_winners(uri)
 
-    return render_template('person.html', collaboration=collaboration, img=url_img, list=personData)
+    return render_template('person.html', oscar_winners=oscar_winners, collaboration=collaboration, img=url_img, list=personData)
 
 
 @app.route('/genre/<string:genre>')
@@ -256,15 +261,21 @@ def get_collaboration(uri):
     """
     sparql.setQuery( PREFIX +
                          "SELECT DISTINCT ?name (GROUP_CONCAT(DISTINCT ?movietitle; SEPARATOR = \"|\") AS ?movielist)  (COUNT(DISTINCT ?movietitle) AS ?movietotal) WHERE {" +
-                            "?movie ?p <" + uri + "> ." +
-                            "?movie ?pre ?person ." +
-                            "?movie wolff:title ?movietitle ." +
-                            "?person a wolff:Person ." +
-                            "?person wolff:name ?name " +
-                            "FILTER(?person != <" + uri + "> )" +
+                            "<" + uri + "> owl:sameAs ?dbplink ." +
+                            "SERVICE <http://dbpedia.org/sparql> {" +
+                                "?movie a dbo:Film ." +
+                                "?movie ?p ?dbplink ." +
+                                "?movie rdfs:label ?movietitle ." +
+                                "?movie ?p2 ?actor ." +
+                                "?actor a dbo:Person ." +
+                                "?actor rdfs:label ?name ." +
+                                "FILTER (langMatches(lang(?movietitle),\"en\"))" +
+                                "FILTER (langMatches(lang(?name),\"en\"))" +
+                                "FILTER (?actor != ?dbplink)" +
+                            "}" +
                          "} GROUP BY ?name " +
                          "ORDER BY DESC(?movietotal) " +
-                         "LIMIT 5"
+                         "LIMIT 15"
                         )
 
     sparql.setReturnFormat(JSON)
@@ -278,3 +289,44 @@ def get_collaboration(uri):
         collaboration[i]['movielist'] = [movie for movie in qResult['movielist']['value'].split('|')]
 
     return collaboration
+
+
+def get_oscar_winners(uri):
+    """
+    get the list of oscar winners whom the subject ever worked with
+    :param uri:
+    :return: list of oscar winners together with the movie where the subject ever worked with
+    """
+    sparql.setQuery( PREFIX +
+                     "SELECT DISTINCT ?strippedname ?strippedtitle WHERE { " +
+                        "<" + uri + "> owl:sameAs ?p_link ." +
+                        "SERVICE <http://dbpedia.org/sparql> { " +
+                            "?movie a dbo:Film . " +
+	                        "?movie ?pre ?p_link . " +
+                            "?movie dbo:starring ?actor . " +
+                            " { ?actor dct:subject <http://dbpedia.org/resource/Category:Best_Actor_Academy_Award_winners> . }" +
+                            " UNION {?actor dct:subject <http://dbpedia.org/resource/Category:Best_Actress_Academy_Award_winners> . }" +
+                            " UNION {?actor dct:subject <http://dbpedia.org/resource/Category:Best_Supporting_Actor_Academy_Award_winners> }" +
+                            " UNION {?actor dct:subject <http://dbpedia.org/resource/Category:Best_Supporting_Actress_Academy_Award_winners> }"
+                            " ?actor rdfs:label ?name . " +
+                            " ?movie rdfs:label ?title . " +
+                            " FILTER(?p_link != ?actor) " +
+                            " FILTER (langMatches(lang(?name),\"en\")) " +
+                            " FILTER (langMatches(lang(?title),\"en\")) " +
+                            " BIND(str(?name) AS ?strippedname) " +
+                            " BIND(str(?title) AS ?strippedtitle) " +
+                        "}" +
+                    "}"
+
+                    )
+
+    sparql.setReturnFormat(JSON)
+    qResults = sparql.query().convert()
+
+    oscar_winners = []
+    for i, qResult in enumerate(qResults['results']['bindings']):
+            oscar_winners.append({})
+            oscar_winners[i]['name'] = qResult['strippedname']['value']
+            oscar_winners[i]['movie'] = qResult['strippedtitle']['value']
+
+    return oscar_winners

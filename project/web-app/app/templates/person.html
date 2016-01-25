@@ -19,9 +19,9 @@
 </div>
 
 <br>
-<p><h3>People whom {{ list['name'][0] }} frequently collaborate with</h3></p>
+<p><h3>People whom {{ list['name'][0] }} frequently collaborates with</h3></p>
 <br>
-<table class="table \table-striped">
+<table class="table table-striped">
     <thead>
         <tr>
             <th class="text-center" width="20%">Name</th>
@@ -39,6 +39,26 @@
     {% endfor %}
     </tbody>
 </table>
+
+<br>
+<p><h3>Oscar winners with whom {{ list['name'][0] }} ever worked together</h3></p>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th class="text-center">Name</th>
+        <th class="text-center">Movie title</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for person in oscar_winners %}
+    <tr>
+        <td class="text-center">{{ person["name"] }}</td>
+        <td class="text-center">{{ person["movie"] }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
 
 <br>
 <p><h3>Works of {{ list['name'][0] }}</h3></p>
